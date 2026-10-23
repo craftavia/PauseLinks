@@ -1,0 +1,92 @@
+# ┌──────────────────────────────────────────────────────────────┐
+# │  PauseLinks by Craftavia                                     │
+# │  https://github.com/craftavia/PauseLinks · craftavia.net     │
+# └──────────────────────────────────────────────────────────────┘
+#
+# All texts use MiniMessage: https://docs.advntr.dev/minimessage/format.html
+# Apply changes with /links reload (see the notes below for the pause button).
+
+# Language used when a player's client language has no messages file.
+# Bundled: en, tr. Add more by copying messages_en.properties to messages_<code>.properties
+# (for example messages_de.properties or messages_pt_br.properties).
+default-language: en
+
+# Show the clickable list in chat with /links.
+chat-list: true
+
+# Fill Minecraft's built-in "Server Links..." screen in the pause menu.
+# The list is sent when a player connects; /links reload re-sends it to online players.
+server-links: true
+
+# Your own button in the pause (Escape) menu that opens a link screen.
+# The button text of Minecraft's "Server Links..." comes from the client and cannot be changed,
+# so PauseLinks adds its own screen through a generated data pack.
+# After changing this section, /links reload rewrites the data pack, but players only see the
+# change after a server restart (data packs are loaded at startup).
+pause-button:
+  enabled: true
+  # Text of the button in the pause menu.
+  button: "<aqua>Server Links...</aqua>"
+  # Title at the top of the screen.
+  title: "<aqua><bold>MY SERVER</bold></aqua>"
+  # One line or a list; each line is shown above the buttons.
+  description:
+    - "<gray>Visit our website, store and Discord with the buttons below.</gray>"
+  columns: 2
+  button-width: 150
+  # Show the address/command itself in the button tooltip.
+  show-address: true
+  close: "<red>Close</red>"
+
+# Extra commands that show a single link in chat, for example /discord.
+# These are registered at startup; a restart is needed after changing this section.
+#   link    : id of a link from the "links" section below
+#   aliases : other names for the same command
+shortcut-commands:
+  discord:
+    link: discord
+    aliases: [dc]
+  website:
+    link: website
+    aliases: [web]
+
+# Your links, shown in this order. Add or remove as many as you like.
+#   enabled     : false = the link is not sent at all
+#   name        : text in the menus and in chat (MiniMessage)
+#   description : short text next to the name in chat and in the button tooltip
+#   url         : must start with http:// or https://
+#   command     : run an in-game command instead of opening a url (for example "/spawn").
+#                 Command entries are not allowed in Minecraft's "Server Links..." list;
+#                 they only appear on the PauseLinks screen and in /links.
+#   type        : leave empty (recommended) to show "name". If you set a type
+#                 (WEBSITE, FORUMS, COMMUNITY, SUPPORT, COMMUNITY_GUIDELINES, ANNOUNCEMENTS,
+#                 NEWS, STATUS, FEEDBACK, REPORT_BUG) the "Server Links..." list shows the
+#                 client's own translated name instead.
+#   pause-menu  : show in the pause menu screens (default true)
+#   chat        : show in /links (default true)
+links:
+  website:
+    name: "<aqua>▸ Website</aqua>"
+    description: "Our home page"
+    url: "https://example.com"
+  store:
+    name: "<gold>▸ Store</gold>"
+    description: "Ranks and supporter packages"
+    url: "https://store.example.com"
+  discord:
+    name: "<blue>▸ Discord</blue>"
+    description: "Join our community"
+    url: "https://discord.gg/example"
+  rules:
+    name: "<green>▸ Rules</green>"
+    description: "Please read before playing"
+    url: "https://example.com/rules"
+  vote:
+    name: "<light_purple>▸ Vote</light_purple>"
+    description: "Vote daily for rewards"
+    url: "https://example.com/vote"
+  spawn:
+    name: "<yellow>▸ Spawn</yellow>"
+    description: "Teleport to spawn"
+    command: "/spawn"
+    chat: false

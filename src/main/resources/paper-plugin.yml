@@ -1,0 +1,15 @@
+name: PauseLinks
+version: '${version}'
+main: net.craftavia.pauselinks.PauseLinksPlugin
+bootstrapper: net.craftavia.pauselinks.PauseLinksBootstrap
+api-version: '1.21.6'
+description: Adds your server links and a custom button to the player's pause (Escape) menu.
+authors: [Craftavia]
+website: https://craftavia.net
+permissions:
+  pauselinks.use:
+    description: View the link list with /links and the shortcut commands.
+    default: true
+  pauselinks.admin:
+    description: Reload the configuration and see the status.
+    default: op

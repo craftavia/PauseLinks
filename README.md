@@ -8,6 +8,8 @@ PauseLinks is a small, free Paper plugin that uses Minecraft's built-in *Server 
 Made and used in production by [**Craftavia**](https://craftavia.net), a Turkish Minecraft network
 (`play.craftavia.net`).
 
+**Download:** [Hangar](https://hangar.papermc.io/mrpunky/PauseLinks) · [GitHub Releases](https://github.com/craftavia/PauseLinks/releases)
+
 ## Features
 
 - **Server Links list** – fills Minecraft's own *Escape → Server Links...* screen with your links.
@@ -99,6 +101,8 @@ The full file with comments is created on first start.
 The jar is written to `build/libs/`.
 
 ## Türkçe
+
+**İndir:** [Hangar](https://hangar.papermc.io/mrpunky/PauseLinks) · [GitHub Releases](https://github.com/craftavia/PauseLinks/releases)
 
 PauseLinks, oyuncunun **Escape (duraklatma) menüsüne** sitenizi, mağazanızı, Discord'unuzu ve
 kurallarınızı ekleyen ücretsiz bir Paper eklentisidir. Minecraft'ın kendi *Sunucu Bağlantıları* ve
